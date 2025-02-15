@@ -2,7 +2,7 @@
 
 namespace Iamchris\LivewireAutocrud;
 
-use Iamchris\LivewireAutocrud\Console\Commands\MakeLivewireCrudCommand;
+use iamchris\LivewireAutoCrud\Console\Commands\MakeLivewireAutoCrudCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LivewireAutoCrudServiceProvider extends ServiceProvider
@@ -11,7 +11,7 @@ class LivewireAutoCrudServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                MakeLivewireCrudCommand::class,
+                MakeLivewireAutoCrudCommand::class,
             ]);
         }
     }
