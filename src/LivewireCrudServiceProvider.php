@@ -2,16 +2,16 @@
 
 namespace Iamchris\LivewireAutocrud;
 
-use iamchris\LivewireAutoCrud\Console\Commands\MakeLivewireAutoCrudCommand;
+use iamchris\LivewireAutoCrud\Console\Commands\MakeLivewireCrudCommand;
 use Illuminate\Support\ServiceProvider;
 
-class LivewireAutoCrudServiceProvider extends ServiceProvider
+class LivewireCrudServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                MakeLivewireAutoCrudCommand::class,
+                MakeLivewireCrudCommand::class,
             ]);
         }
     }

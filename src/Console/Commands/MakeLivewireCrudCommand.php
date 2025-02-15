@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 
-class MakeLivewireAutoCrudCommand extends Command
+class MakeLivewireCrudCommand extends Command
 {
     protected $signature = 'make:livewire-crud {model? : The name of the model}';
     protected $description = 'Generate Livewire CRUD scaffolding for a model.';
