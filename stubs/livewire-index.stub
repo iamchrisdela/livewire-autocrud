@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Livewire\{{modelName}};
+
+use Livewire\Component;
+use App\Models\{{modelName}};
+
+class Index extends Component
+{
+    public ${{modelVariable}}s;
+
+    public function mount()
+    {
+        $this->{{modelVariable}}s = {{modelName}}::all();
+    }
+
+    public function render()
+    {
+        return view('livewire.{{modelVariable}}.index');
+    }
+}

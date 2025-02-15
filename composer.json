@@ -1,0 +1,24 @@
+{
+    "name": "iamchris/livewire-autocrud",
+    "description": "A Livewire 3 package to generate CRUD scaffolding.",
+    "type": "library",
+    "require": {
+        "php": "^8",
+        "laravel/framework": "^11",
+        "livewire/livewire": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Iamchris\\LivewireAutocrud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christian Valentine Tsigbey",
+            "email": "iamtsigbey@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
