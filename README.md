@@ -20,26 +20,17 @@ A Laravel package to generate **Livewire CRUD scaffolding** for your models, sim
    ```bash
    composer require iamchris/livewire-autocrud
 
-   **Usage***:
+  
    ```
 Generate CRUD scaffolding for a model:
 
    ```
     Publish the Package Configuration (if applicable):
-    bash
-   
 
+   
     php artisan vendor:publish --provider="iamchris\LivewireAutoCrud\LivewireAutoCrudServiceProvider"
 
-    Run the Command:
-    Generate CRUD scaffolding for a model:
-    bash
-    Copy
-
-    php artisan make:livewire-crud ModelName
-
-    Usage
-    Generate CRUD Scaffolding
+ 
 ```
 To generate CRUD scaffolding for a model, run:
 ```
