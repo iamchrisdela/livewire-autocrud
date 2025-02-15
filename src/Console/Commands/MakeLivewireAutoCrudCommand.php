@@ -1,18 +1,25 @@
 <?php
 
-namespace Iamchris\LivewireAutocrud\Console\Commands;
+namespace iamchris\LivewireAutoCrud\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 
-class MakeLivewireCrudCommand extends Command
+class MakeLivewireAutoCrudCommand extends Command
 {
     protected $signature = 'make:livewire-crud {model? : The name of the model}';
     protected $description = 'Generate Livewire CRUD scaffolding for a model.';
 
     public function handle()
     {
+        // Check if Livewire is installed
+        if (!class_exists(\Livewire\Livewire::class)) {
+            $this->error("Livewire is not installed. Please install it first:");
+            $this->info("composer require livewire/livewire");
+            return;
+        }
+
         // Prompt for the model name if not provided
         $modelName = $this->argument('model') ?? $this->ask('Enter the model name (e.g., Product)');
 
